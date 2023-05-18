@@ -1,12 +1,11 @@
 body {
     background-color: #0000ff;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    
 }
 
 #div-one {
@@ -14,22 +13,20 @@ body {
     width: 400px;
     background-color: yellow;
     border-radius: 50px;
+    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    
 }
 
 #div-two {
     height: 300px;
     width: 300px;
     background-color: red;
+    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    
 }
 
 #div-three {
@@ -37,12 +34,12 @@ body {
     width: 200px;
     background-color: green;
     border-radius: 100px;
+    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-
 
 @keyframes rotate {
     from {
@@ -52,12 +49,16 @@ body {
         -webkit-transform: rotate(360deg);
     }
 }
-p   {
+
+#jsButton   {
     animation-name: rotate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    
+    border-radius: 75%;
+    border: 2px solid black;
+    height: 75px;
+    width: 75px;
+    cursor: pointer;
+    background-color: pink;
 }
-
-

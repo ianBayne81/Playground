@@ -1,5 +1,14 @@
-const createParagraph = document.createElement('p')
-createParagraph.textContent = 'Inserted through Javascript!'
 
-const selectElement = document.querySelector('#div-three')
-selectElement.appendChild(createParagraph)
+const createButton = document.createElement('button')
+createButton.textContent = 'News'
+const selectButtonElement = document.querySelector('#div-three')
+selectButtonElement.appendChild(createButton)
+createButton.setAttribute('id', 'jsButton')
+
+document.querySelector('#jsButton').addEventListener('click', function (e) {
+    e.preventDefault()
+    location.assign('https://news.com.au')
+   });
+
+
+
