@@ -1,6 +1,6 @@
 
 const createButton = document.createElement('button')
-createButton.textContent = 'News'
+createButton.textContent = ''
 const selectButtonElement = document.querySelector('#div-three')
 selectButtonElement.appendChild(createButton)
 createButton.setAttribute('id', 'jsButton')
