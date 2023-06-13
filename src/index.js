@@ -5,7 +5,7 @@ gsap.registerPlugin(Flip)
 const getDate = moment().format('LLL') // moment.js link from html page
 const createTime = document.createElement('p')
 createTime.textContent = getDate
-const selectHeader = document.querySelector('#header')
+const selectHeader = document.querySelector('#get-date')
 selectHeader.appendChild(createTime)
 
 //create button / link element
@@ -25,13 +25,14 @@ document.querySelector('#jsButton').addEventListener('click', function (e) {
 const targetLetterI = document.querySelector('#i')
 const targetLetterA = document.querySelector('#a')
 const targetLetterN = document.querySelector('#n')
+const letterHome = document.querySelector('#letters-home')
 window.onload = function () {
     let letterI = Flip.getState('#i')
     let letterA = Flip.getState('#a')
     let letterN = Flip.getState('#n')
-    selectHeader.appendChild(targetLetterI)
-    selectHeader.appendChild(targetLetterA)
-    selectHeader.appendChild(targetLetterN)
+    letterHome.appendChild(targetLetterI)
+    letterHome.appendChild(targetLetterA)
+    letterHome.appendChild(targetLetterN)
     Flip.from(letterI, {duration: 3, ease: "power1.out"})
     Flip.from(letterA, {duration: 4, ease: "power1.out"})
     Flip.from(letterN, {duration: 5, ease:"power1.out"})
