@@ -12,150 +12,132 @@ body {
 #header {
     display: block;
     height: 100px;
-    width: 100%;
-    background-color: white;
-    font-size: 50px;
-    color: black;
+    width: 400px;
+    margin: auto;
+    background-color: black;
+    border-bottom: 5px solid white;
 }
 
 #get-date {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#letters-home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#menu-bar {
-    margin: 0;
-    height: 50px;
-    width: 100%;
-    background-color: black;
-    opacity: .8;
-    display: flex;
-    align-items: center;
-    text-align: left;
-}
-
-#menu {
-    margin-left: 50px;
+    font-size: 25px;
     color: white;
-    font-size: 20px;
+    padding: 10px;
 }
 
-#container {
-    margin: auto;
-    height: 400px;
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: white;
+}
+
+#outer-housing {
+    display: block;
+    text-align: center;
     width: 400px;
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#box {
+    height: 100%;
     margin: auto;
-    height: 300px;
+    background-color: black;
+}
+
+#input-screen {
     width: 300px;
+    height: 65px;
+    margin-top: 10px;
+    font-size: 30px;
+    background-color: rgb(3, 90, 3);
+    color: white;
+    font-weight: 300pt;
+    text-align: right;
+    
+}
+
+#button-housing {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    background-color: blue;
-    /* transform: rotate(-45deg) */
+    justify-content: center;
+    margin: auto;
+    width: 350px;
 }
 
-#button-element {
+.button {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 55px;
+    margin: 10px;
+    border: 2px solid white;
+    font-size: 50px;
+    font-weight: 300pt;
+    color: white;
 }
 
-#jsButton   {
-    border-radius: 75%;
-    border: 2px solid black;
-    height: 140px;
-    width: 140px;
-    cursor: pointer;
-    background-image: url("./images/news.jpg");
-}
-
-#jsButton:hover {
+.button:hover {
     transform: scale(1.2);
 }
 
-#footer {
-    height: 50px;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transform: rotate(180deg)
-}
-
-.letter {
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 20px;
-    font-size: 30px;
-    text-align: center;
-    
-}
-
-/* Phone screen size settings */
-@media screen and (min-width: 0px) and (max-width: 480px) {
-
-#header {
-    height: 80px;
-    width: 100%;
-    font-size: 20px;
-        
-}
-
-.letter {
-    margin-left: 15px;
-    margin-right: 15px;
-    width: 20px;
-    font-size: 20px;
-    text-align: center;
-    
-}
-
-#menu {
-    margin-left: 20px;
+#clear {
+    color: red;
     font-size: 15px;
 }
 
-#container {
-    height: 200px;
+#backspace {
+    color: red;
+}
+
+#equals {
+    color: green;
+}
+
+/* Phone screen size settings */
+@media screen and (min-width: 0px) and (max-width: 410px) {
+
+
+#header {
+    display: block;
+    height: 100px;
+    width: 250px;
+    margin: auto;
+    background-color: black;
+    border-bottom: 5px solid white;
+}
+
+#outer-housing {
+    width: 250px;
+    height: 100vh;
+    margin: auto;
+    background-color: black;
+}
+
+#get-date {
+    font-size: 15px;
+}
+
+#title {
+    font-size: 25px;
+}
+
+#input-screen {
     width: 200px;
-}
-
-#box {
-    height: 150px;
-    width: 150px;
-}
-
-#jsButton {
-    height: 75px;
-    width: 75px;
-    background-image: url("./images/news75px.jpg");
-}
-
-}
-
-/* Tablet size screen settings */
-@media screen and (min-width: 480px) and (max-width: 800px) {
+    height: 45px;
+    font-size: 25px;
     
-    #header {
-        height: 100px;
-        width: 100vw;
-        font-size: 30px;
-            
-    }
+}
+
+#button-housing {
+    width: 200px;
+
+}
+.button {
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+}
 
 }
