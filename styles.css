@@ -47,7 +47,8 @@ body {
 #input-screen {
     width: 300px;
     height: 65px;
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 10px;
     font-size: 30px;
     background-color: rgb(3, 90, 3);
     color: white;
@@ -61,7 +62,9 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 10px;
     width: 350px;
 }
 
@@ -73,9 +76,12 @@ body {
     width: 55px;
     margin: 10px;
     border: 2px solid white;
+    border-radius: 5px;
     font-size: 50px;
     font-weight: 300pt;
     color: white;
+    background-color: black;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -89,6 +95,7 @@ body {
 
 #backspace {
     color: red;
+    font-size: 15px;
 }
 
 #equals {
@@ -97,7 +104,6 @@ body {
 
 /* Phone screen size settings */
 @media screen and (min-width: 0px) and (max-width: 410px) {
-
 
 #header {
     display: block;
@@ -138,6 +144,14 @@ body {
     height: 40px;
     width: 40px;
     font-size: 30px;
+}
+
+#clear {
+    font-size: 10px;
+}
+
+#backspace {
+    font-size: 10px;
 }
 
 }
