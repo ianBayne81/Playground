@@ -37,24 +37,23 @@ body {
 
 #outer-housing {
     display: block;
-    text-align: center;
     width: 400px;
     height: 100%;
     margin: auto;
     background-color: black;
 }
 
-#input-screen {
-    width: 300px;
+#screen {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 400px;
     height: 65px;
-    margin-top: 15px;
-    padding: 10px;
     font-size: 30px;
+    letter-spacing: 2px;
     background-color: rgb(3, 90, 3);
     color: white;
     font-weight: 300pt;
-    text-align: right;
-    
 }
 
 #button-housing {
@@ -129,10 +128,11 @@ body {
     font-size: 25px;
 }
 
-#input-screen {
-    width: 200px;
+#screen {
+    width: 250px;
     height: 45px;
-    font-size: 25px;
+    font-size: 20px;
+    letter-spacing: 1px;
     
 }
 
