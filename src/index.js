@@ -9,130 +9,132 @@ selectHeader.appendChild(createTime)
 //
 
 //Select DOM buttons for calculator
-const selectScreen = document.querySelector('#screen')
+const selectScreen = document.querySelector(".display")
 const selectClearButton = document.querySelector('#clear')
 const selectBackspaceButton = document.querySelector("#backspace")
 const selectEqualsButton = document.querySelector("#equals")
 const selectDecimalButton = document.querySelector("#decimal")
-const selectMinusButton = document.querySelector("#subtract")
+const selectMinusButton = document.querySelector("#minus")
 const selectDivideButton = document.querySelector("#divide")
-const selectAddButton = document.querySelector("#addition")
+const selectAddButton = document.querySelector("#plus")
 const selectMultiplyButton= document.querySelector("#multiply")
-const selectButtonZero = document.querySelector("#num-zero")
-const selectButtonOne = document.querySelector("#num-one")
-const selectButtonTwo = document.querySelector("#num-two")
-const selectButtonThree = document.querySelector("#num-three")
-const selectButtonFour = document.querySelector("#num-four")
-const selectButtonFive = document.querySelector("#num-five")
-const selectButtonSix = document.querySelector("#num-six")
-const selectButtonSeven = document.querySelector("#num-seven")
-const selectButtonEight = document.querySelector("#num-eight")
-const selectButtonNine = document.querySelector("#num-nine")
+const selectDoubleZero = document.querySelector("#double-zero")
+const selectButtonZero = document.querySelector("#zero")
+const selectButtonOne = document.querySelector("#one")
+const selectButtonTwo = document.querySelector("#two")
+const selectButtonThree = document.querySelector("#three")
+const selectButtonFour = document.querySelector("#four")
+const selectButtonFive = document.querySelector("#five")
+const selectButtonSix = document.querySelector("#six")
+const selectButtonSeven = document.querySelector("#seven")
+const selectButtonEight = document.querySelector("#eight")
+const selectButtonNine = document.querySelector("#nine")
 
+//Render the string to screen
 
-
-//create array 
-const newArray = []
-
-//newArray.concat joins two arrays
-
-//functions created are to be transfered over to functions file and imported/exported into main js file
-const renderArray = () => {
-    if (newArray.length > 12) {
-        newArray.length = 12;
+const render = () => { 
+    if (selectScreen.value.length > 12) {
+        selectScreen.value = selectScreen.value.toString().slice(0, -1)
     }
-    selectScreen.innerHTML = newArray.join(" ")
+
+    const createPara = document.createElement('p')
+    createPara.textContent = selectScreen.value
+    selectScreen.appendChild(createPara)
 }
 
 //Eventlisteners for buttons
 selectClearButton.addEventListener("click",(e) => {
-    newArray.length = 0
-    renderArray()
+    selectScreen.value = ''
 })
 
 selectBackspaceButton.addEventListener("click", (e) => {
-    newArray.pop()
-    renderArray()
+    selectScreen.value = selectScreen.value.toString().slice(0, -1)
+    render()
 })
 
 selectAddButton.addEventListener("click", (e) => {
-    newArray.push('+')
-    renderArray()
+    selectScreen.value += '+'
+    render()
 })
 
 selectMinusButton.addEventListener("click", (e) => {
-    newArray.push('-')
-    renderArray()
+    selectScreen.value += '-'
+    render()
 })
 
 selectMultiplyButton.addEventListener("click", (e) => {
-    newArray.push('x')
-    renderArray()
+    selectScreen.value += '*'
+    render()
 })
 
 selectDivideButton.addEventListener("click", (e) => {
-    newArray.push('/')
-    renderArray()
+    selectScreen.value += '/'
+    render()
 })
 
 selectEqualsButton.addEventListener("click", (e) => {
-    newArray.push('=')
-    renderArray()
+    selectScreen.value = eval(selectScreen.value)
+    render()
 })
 
 selectDecimalButton.addEventListener("click", (e) => {
-    newArray.push('.')
-    renderArray()
+    selectScreen.value += '.'
+    render()
+})
+
+selectDoubleZero.addEventListener("click", (e) => {
+    selectScreen.value += '00'
+    render()
 })
 
 selectButtonZero.addEventListener("click", (e) => {
-    newArray.push(0)
-    renderArray()
+    selectScreen.value += '0'
+    render()
 })
 
 selectButtonOne.addEventListener("click",(e) => {
-    newArray.push(1)
-    renderArray()
+    selectScreen.value += '1'
+    render()
 })
 
 selectButtonTwo.addEventListener("click",(e) => {
-    newArray.push(2)
-    renderArray()
+    selectScreen.value += '2'
+    render()
 })
 
 selectButtonThree.addEventListener("click",(e) => {
-    newArray.push(3)
-    renderArray()
+    selectScreen.value += '3'
+    render()
 })
 
 selectButtonFour.addEventListener("click",(e) => {
-    newArray.push(4)
-    renderArray()
+    selectScreen.value += '4'
+    render()
 })
 
 selectButtonFive.addEventListener("click",(e) => {
-    newArray.push(5)
-    renderArray()
+    selectScreen.value += '5'
+    render()
 })
 
 selectButtonSix.addEventListener("click",(e) => {
-    newArray.push(6)
-    renderArray()
+    selectScreen.value += '6'
+    render()
 })
 
 selectButtonSeven.addEventListener("click",(e) => {
-    newArray.push(7)
-    renderArray()
+    selectScreen.value += '7'
+    render()
 })
 
 selectButtonEight.addEventListener("click",(e) => {
-    newArray.push(8)
-    renderArray()
+    selectScreen.value += '8'
+    render()
 })
 
 selectButtonNine.addEventListener("click",(e) => {
-    newArray.push(9)
-    renderArray()
+    selectScreen.value += '9'
+    render()
 })
 
 

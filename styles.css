@@ -6,7 +6,7 @@
 body {
     background-color: white;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 #header {
@@ -43,27 +43,32 @@ body {
     background-color: black;
 }
 
-#screen {
+.screen {
     display: flex;
     align-items: center;
-    justify-content: right;
-    width: 400px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.display {
+    text-align: right;
+    width: 100%;
     height: 65px;
     font-size: 30px;
-    letter-spacing: 2px;
+    letter-spacing: 10px;
     background-color: rgb(3, 90, 3);
     color: white;
     font-weight: 300pt;
 }
 
-#button-housing {
+.button-housing {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right:auto;
     margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
     width: 350px;
 }
 
@@ -75,8 +80,8 @@ body {
     width: 55px;
     margin: 10px;
     border: 2px solid white;
-    border-radius: 5px;
-    font-size: 50px;
+    border-radius: 10px;
+    font-size: 40px;
     font-weight: 300pt;
     color: white;
     background-color: black;
@@ -89,20 +94,19 @@ body {
 
 #clear {
     color: red;
-    font-size: 15px;
 }
 
 #backspace {
     color: red;
-    font-size: 15px;
 }
 
 #equals {
     color: green;
+    width: 130px;
 }
 
 /* Phone screen size settings */
-@media screen and (min-width: 0px) and (max-width: 410px) {
+@media screen and (min-width: 0px) and (max-width: 450px) {
 
 #header {
     display: block;
@@ -128,15 +132,15 @@ body {
     font-size: 25px;
 }
 
-#screen {
-    width: 250px;
+.display {
+    width: 100%;
     height: 45px;
     font-size: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 5px;
     
 }
 
-#button-housing {
+.button-housing {
     width: 200px;
 
 }
@@ -147,11 +151,15 @@ body {
 }
 
 #clear {
-    font-size: 10px;
+    font-size: 20px;
 }
 
 #backspace {
-    font-size: 10px;
+    font-size: 20px;
+}
+
+#equals {
+    width: 160px;
 }
 
 }

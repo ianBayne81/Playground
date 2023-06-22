@@ -18,27 +18,32 @@
         </header>
 
         <div id="outer-housing">
-            <div id="screen"></div>
-            <div id="button-housing">
-                <button id="clear" class="button">Clear all</button>
-                <button id="multiply" class="button">x</button>
-                <button id="subtract" class="button">-</button>
-                <button id="decimal" class="button">.</button>
-                <button id="addition" class="button">+</button>
-                <button id="divide" class="button">/</button>
-                <button id="num-one" class="button">1</button>
-                <button id="num-two" class="button">2</button>
-                <button id="num-three" class="button">3</button>
-                <button id="num-four" class="button">4</button>
-                <button id="num-five" class="button">5</button>
-                <button id="num-six" class="button">6</button>
-                <button id="num-seven" class="button">7</button>
-                <button id="num-eight" class="button">8</button>
-                <button id="num-nine" class="button">9</button>
-                <button id="num-zero" class="button">0</button>
-                <button id="backspace" class="button">Back space</button>
-                <button id="equals" class="button">=</button>
-            </div>
+            <form>
+                <div class="screen">
+                    <input class="display" type="text" name="display" placeholder="0" maxlength="12">
+                </div>
+                <div class="button-housing">
+                    <input id="clear" class="button" type="button" value="C">
+                    <input id="backspace" class="button" type="button" value="<">
+                    <input id="one" class="button" type="button" value="1">
+                    <input id="two" class="button" type="button" value="2">
+                    <input id="three" class="button" type="button" value="3">
+                    <input id="four" class="button" type="button" value="4">
+                    <input id="five" class="button" type="button" value="5">
+                    <input id="six" class="button" type="button" value="6">
+                    <input id="seven" class="button" type="button" value="7">
+                    <input id="eight" class="button" type="button" value="8">
+                    <input id="nine" class="button" type="button" value="9">
+                    <input id="zero" class="button" type="button" value="0">
+                    <input id="double-zero" class="button" type="button" value="00">
+                    <input id="plus" class="button" type="button" value="+">
+                    <input id="minus" class="button" type="button" value="-">
+                    <input id="multiply" class="button" type="button" value="*">
+                    <input id="divide" class="button" type="button" value="/">
+                    <input id="decimal" class="button" type="button" value=".">
+                    <input id="equals" class="button" type="button" value="=">
+                </div>
+            </form>
         </div>
         
 
