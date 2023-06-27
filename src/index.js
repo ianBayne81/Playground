@@ -5,8 +5,6 @@ createTime.textContent = getDate
 const selectHeader = document.querySelector('#get-date')
 selectHeader.appendChild(createTime)
 
-//ensure values entered into input are numberic only
-//
 
 //Select DOM buttons for calculator
 const selectScreen = document.querySelector(".display")
@@ -30,10 +28,11 @@ const selectButtonSeven = document.querySelector("#seven")
 const selectButtonEight = document.querySelector("#eight")
 const selectButtonNine = document.querySelector("#nine")
 
-//Render the string to screen
+//Render the string to screen limiting the amount of characters to 13
 
 const render = () => { 
-    if (selectScreen.value.length > 12) {
+    
+    if (selectScreen.value.length > 13) {
         selectScreen.value = selectScreen.value.toString().slice(0, -1)
     }
 
@@ -49,31 +48,6 @@ selectClearButton.addEventListener("click",(e) => {
 
 selectBackspaceButton.addEventListener("click", (e) => {
     selectScreen.value = selectScreen.value.toString().slice(0, -1)
-    render()
-})
-
-selectAddButton.addEventListener("click", (e) => {
-    selectScreen.value += '+'
-    render()
-})
-
-selectMinusButton.addEventListener("click", (e) => {
-    selectScreen.value += '-'
-    render()
-})
-
-selectMultiplyButton.addEventListener("click", (e) => {
-    selectScreen.value += '*'
-    render()
-})
-
-selectDivideButton.addEventListener("click", (e) => {
-    selectScreen.value += '/'
-    render()
-})
-
-selectEqualsButton.addEventListener("click", (e) => {
-    selectScreen.value = eval(selectScreen.value)
     render()
 })
 
@@ -137,7 +111,34 @@ selectButtonNine.addEventListener("click",(e) => {
     render()
 })
 
+selectAddButton.addEventListener("click", (e) => {
+    selectScreen.value += '+'
+    render()
+})
 
+selectMinusButton.addEventListener("click", (e) => {
+    selectScreen.value += '-'
+    render()
+})
+
+selectMultiplyButton.addEventListener("click", (e) => {
+    selectScreen.value += '*'
+    render()
+})
+
+selectDivideButton.addEventListener("click", (e) => {
+    selectScreen.value += '/'
+    render()
+})
+
+selectEqualsButton.addEventListener("click", (e) => {
+    if (selectScreen.value.includes('.')) {
+        selectScreen.value = eval(selectScreen.value).toFixed(2)
+    } else {
+        selectScreen.value = eval(selectScreen.value)
+    }
+    render()
+})
 
 
 
