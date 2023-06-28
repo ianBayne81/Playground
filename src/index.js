@@ -132,6 +132,7 @@ selectDivideButton.addEventListener("click", (e) => {
 })
 
 selectEqualsButton.addEventListener("click", (e) => {
+
     if (selectScreen.value.includes('.')) {
         selectScreen.value = eval(selectScreen.value).toFixed(2)
     } else {

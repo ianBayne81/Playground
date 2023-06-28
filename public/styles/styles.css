@@ -38,9 +38,14 @@ body {
 #outer-housing {
     display: block;
     width: 400px;
-    height: 100%;
+    height: auto;
     margin: auto;
     background-color: black;
+}
+
+form {
+    height: 100%;
+    width: 100%;
 }
 
 .screen {
@@ -70,6 +75,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     width: 350px;
+    height: auto;
 }
 
 .button {
@@ -111,15 +117,15 @@ body {
 #header {
     display: block;
     height: 80px;
-    width: 250px;
+    width: 100vw;
     margin: auto;
     background-color: black;
     border-bottom: 5px solid white;
 }
 
 #outer-housing {
-    width: 250px;
-    height: 100vh;
+    width: 100vw;
+    height: 100%;
     margin: auto;
     background-color: black;
 }
@@ -133,7 +139,7 @@ body {
 }
 
 .display {
-    width: 100%;
+    width: 250px;
     height: 45px;
     font-size: 20px;
     letter-spacing: 5px;
@@ -141,12 +147,14 @@ body {
 }
 
 .button-housing {
-    width: 200px;
+    width: 225px;
+    margin-top: 0px;
 
 }
 .button {
     height: 40px;
     width: 40px;
+    margin: 5px;
     font-size: 30px;
 }
 
@@ -159,7 +167,7 @@ body {
 }
 
 #equals {
-    width: 160px;
+    width: 90px;
 }
 
 }
